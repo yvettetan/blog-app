@@ -1,6 +1,8 @@
 <h1>
   <%= @article.title %>
 </h1>
+<p>Posted on: <%= @article.created_at.strftime("%b %d, %Y")%></p>
+<p>Last updated: <%= @article.updated_at.strftime("%b %d, %Y")%></p>
 <p>
   <%= @article.body %>
 </p>
