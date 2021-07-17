@@ -7,9 +7,9 @@
   <% end %>
 </div>
 
-<div>
-  <%= form.label :body, class: 'form-label' %><br>
-  <%= form.text_area :body, class: 'form-control' %><br>
+<div class="field">
+  <%= form.label :body, class: 'form-label' %>
+  <%= form.rich_text_area :body, class: 'form-control' %>
   <% article.errors.full_messages_for(:body).each do |message| %>
   <div><%= message %></div>
   <% end %>

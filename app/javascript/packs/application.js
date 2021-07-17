@@ -25,3 +25,5 @@ document.addEventListener("DOMContentLoaded", function (event) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
 });
+require("trix")
+require("@rails/actiontext")
