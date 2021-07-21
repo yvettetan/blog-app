@@ -16,9 +16,13 @@
   <header>
     <%= render 'layouts/header' %>
   </header>
-  <div class="container-lg mt-4">
-    <%= yield %>
-  </div>
+  <main class="flex-shrink-0">
+    <div class="container">
+      <%= yield %>
+    </div>
+  </main>
+  <footer class="footer fixed-bottom py-3 bg-light">
+    <%= render 'layouts/footer' %>
+  </footer>
 </body>
-
 </html>
