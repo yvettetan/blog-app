@@ -11,8 +11,8 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-import * as bootstrap from 'bootstrap'
-import "../stylesheets/application"
+import 'bootstrap'
+import '../stylesheets/application'
 
 document.addEventListener("DOMContentLoaded", function (event) {
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
@@ -25,5 +25,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
 });
-require("trix")
-require("@rails/actiontext")
+
+require('trix')
+require('@rails/actiontext')
