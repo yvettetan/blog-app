@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   def is_admin!
     # #if user is logged in and if user is an admin
     if current_user&.admin
-      nil
+      # do nothing
     else
       redirect_to root_path
     end
