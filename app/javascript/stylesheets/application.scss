@@ -1,2 +1,55 @@
 @import "bootstrap";
-@import './fonts.scss'
+@import './variables';
+@import './typography';
+@import './buttons';
+
+body {
+    font-family: $primary-font;
+    background: $body-color;
+}
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+a,
+button,
+select {
+  cursor: pointer;
+  transition: .2s ease;
+
+  &:focus {
+    outline: 0;
+  }
+}
+  
+.bg-primary {
+    background: $primary-color !important;
+  }
+  
+  .bg-secondary{
+    background: $secondary-color !important;
+  }
+  
+  .text-primary {
+    color: $primary-color !important;
+  }
+  
+  .text-color {
+    color: $text-color;
+  }
+  
+  .text-dark {
+    color: $text-color-dark !important;
+  }
+
+.hero-section {
+  margin-top: 4em;
+}
+.trix-content {
+    font-family: $secondary-font;
+}
+.feature-img {
+  width: 180px;
+  height: 250px;
+}
