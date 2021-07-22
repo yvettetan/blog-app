@@ -1,4 +1,9 @@
-<h1>Edit Article</h1>
-
-<%= render "form", article: @article %>
-<%= link_to 'Cancel', article_path(@article.id) %>
+<div class="container mb-4" style="margin-top: 2em">
+    <h1>Edit Article</h1>
+    <div class="mb-4 pb-4">
+        <%= render "form", article: @article %>
+        <div class="container">
+            <%= link_to 'Cancel', article_path(@article.id), class: 'btn btn-secondary my-4' %>
+        </div>
+    </div>
+</div>
