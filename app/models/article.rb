@@ -3,7 +3,6 @@ class Article < ApplicationRecord
 
   # Active Storage
   has_one_attached :thumbnail
-  has_one_attached :banner
 
   # Action Text from rails 6
   has_rich_text :body
