@@ -11,7 +11,7 @@
       <div class="col d-flex align-items-start">
         <div>
           <h4 class="fw-bold mb-0"><%= article.title %></h4>
-          <p><span class="text-muted">By:</span> <%= article.user.username %> |
+          <p class="mt-2"><span class="text-muted">By:</span> <%= article.user.username %> |
               <span class="text-muted">Updated: </span><%= article.updated_at.strftime("%b %d, %Y")%></p>
           <div>
           <%# only display edit and delete options if article was written by admin %>

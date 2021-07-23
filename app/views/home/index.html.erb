@@ -11,7 +11,7 @@
         <div class="col p-4 d-flex flex-column position-static">
           <h3 class="mb-0"><%= @article_feature1.title %></h3>
           <br>
-          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text mb-auto"><%= @article_feature1.body.to_plain_text.truncate_words(25) %></p>
           <div class="text-primary">
             <%= link_to "Continue Reading", Article.find(@article_feature1.id), class: 'text-primary' %>
             <%= icon("arrow-right") %>
@@ -27,7 +27,7 @@
         <div class="col p-4 d-flex flex-column position-static">
           <h3 class="mb-0"><%= @article_feature2.title %></h3>
           <br>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <p class="mb-auto"><%= @article_feature2.body.to_plain_text.truncate_words(25) %></p>
           <div class="text-primary">
             <%= link_to "Continue Reading", Article.find(@article_feature2.id), class: 'text-primary' %>
             <%= icon("arrow-right") %>
