@@ -2,7 +2,6 @@
     <h1 class="mt-5 display-4">EPILOGUE.</h1>
     <p class="lead my-3">Find comfort within these pages.</p>
 </div>
-
 <%# only display featured articles if more than 1 %>
 <% if Article.second %>
 <div class="row mb-2">
@@ -41,7 +40,24 @@
   </div>
 <% end %>
 <div class="row g-5">
-    <div class="col-md-8">
+<div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-primary text-light rounded">
+          <h4 class="fst-italic border-bottom pb-2">About</h4>
+          <p class="mb-0">Hi! Welcome to Epilogue–my special nook for all things books. Sharing with you some book recommendations and reviews.
+          <br><br>Happy reading <%= icon("emoji-smile") %> </p>
+        </div>
+        <div class="p-4">
+          <h4 class="fst-italic">Social</h4>
+          <ol class="list-unstyled">
+            <%= icon("instagram", class: 'mx-2') %>
+            <%= icon("twitter", class: 'mx-2') %>
+            <%= icon("linkedin", class: 'mx-2') %>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 my-4">
       <h3 class="py-4 mb-4 fst-italic border-bottom border-top">
         <q class="text-muted">To read is to voyage through time.</q><span class="lead">- Carl Sagan</span>
       </h3>
@@ -69,22 +85,5 @@
         <a class="btn btn-outline-primary" href="#">Older</a>
         <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
       </nav>
-    </div>
-     <div class="col-md-4">
-      <div class="position-sticky" style="top: 2rem;">
-        <div class="p-4 mb-3 bg-primary text-light rounded">
-          <h4 class="fst-italic border-bottom pb-2">About</h4>
-          <p class="mb-0">Hi! Welcome to Epilogue–my special nook for all things books. Sharing with you some book recommendations and reviews.
-          <br><br>Happy reading <%= icon("emoji-smile") %> </p>
-        </div>
-        <div class="p-4">
-          <h4 class="fst-italic">Social</h4>
-          <ol class="list-unstyled">
-            <%= icon("instagram", class: 'mx-2') %>
-            <%= icon("twitter", class: 'mx-2') %>
-            <%= icon("linkedin", class: 'mx-2') %>
-          </ol>
-        </div>
-      </div>
     </div>
 </div>
