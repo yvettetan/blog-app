@@ -20,9 +20,9 @@
  </div>
 <% end %>
 <div class="container-fluid">
-<% if @article.comments.any? %>
+<% if !@article.comments.empty? %>
   <h2>Comments</h2>
-  <%= render @article.comments %>
+  <%= render 'comments/comment' %>
 <% end %>
  <h2 class="mt-4">Add a comment:</h2>
   <%= render 'comments/form' %>
