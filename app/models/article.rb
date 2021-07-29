@@ -1,12 +1,10 @@
 class Article < ApplicationRecord
   belongs_to :user
-
   # Active Storage
   has_one_attached :thumbnail
-
   # Action Text from rails 6
   has_rich_text :body
-
+  has_many :comments
   validates :title, { presence: true, uniqueness: true }
   validates :body, { presence: true, length: { minimum: 5 } }
 
