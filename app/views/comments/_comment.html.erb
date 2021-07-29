@@ -1,0 +1,9 @@
+<% @article.comments.each do |comment| %>
+  <div class="card">
+    <p class="card-header"><%= icon("person-fill", class: 'mx-2') %><strong><%= comment.commenter %></strong>
+    <span class="text-muted"> | <%= comment.updated_at.strftime("%b %d, %Y") %></span></p>
+    <p class="card-body">
+      <%= comment.body %>
+    </p>
+  </div>
+<% end %>
