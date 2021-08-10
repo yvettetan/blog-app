@@ -1,36 +1,36 @@
 <div class="float-end mt-4">
-<%# only display back and new article options if article was written by admin %>
+  <%# only display back and new article options if article was written by admin %>
   <% if current_user&.admin %>
-  <%= link_to "New Article", new_article_path, class: 'btn btn-primary' %>
+    <%= link_to "New Article", new_article_path, class: 'btn btn-primary' %>
   <% end %>
 </div>
 <div class="container px-4 py-5" id="icon-grid">
-    <h2 class="pb-2 border-bottom">Articles</h2>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4 py-5">
+  <h2 class="pb-2 border-bottom">Articles</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4 py-5">
     <% @articles.each do |article| %>
       <div class="col d-flex align-items-start">
         <div>
           <h4 class="fw-bold mb-0"><%= article.title %></h4>
           <p class="mt-2"><span class="text-muted">By:</span> <%= article.user.username %> |
-              <span class="text-muted">Updated: </span><%= article.updated_at.strftime("%b %d, %Y")%>
+            <span class="text-muted">Updated: </span><%= article.updated_at.strftime("%b %d, %Y")%>
           </p>
           <p>
-          <%= article.body.to_plain_text.truncate_words(15) %>
+            <%= article.body.to_plain_text.truncate_words(15) %>
           </p>
           <div>
-          <%# only display edit and delete options if article was written by admin %>
-          <% if current_user&.admin %>
+            <%# only display edit and delete options if article was written by admin %>
+            <% if current_user&.admin %>
               <%= link_to icon("pencil-square") + ' Edit', edit_article_path(article.id), class: 'text-success' %> |
               <%= link_to icon("trash") + ' Delete', article_path(article.id),
                       method: :delete,
                       data: { confirm: "Are you sure you want to delete #{article.title}?" },
                       class: 'text-danger' %> |
-          <% end %>
-              <%= link_to "Continue Reading", article, class: 'text-primary' %>
-              <%= icon("arrow-right", class: 'text-primary') %>
+            <% end %>
+            <%= link_to "Continue Reading", article, class: 'text-primary' %>
+            <%= icon("arrow-right", class: 'text-primary') %>
           </div>
         </div>
       </div>
-      <% end %>
-    </div>
+    <% end %>
   </div>
+</div>
