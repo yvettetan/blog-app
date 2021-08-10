@@ -1,7 +1,17 @@
 <% @article.comments.each do |comment| %>
   <div class="card mt-2">
     <p class="card-header d-flex justify-content-between"><strong><%= icon("person-fill", class: 'mx-2') %> <%= comment.commenter %></strong>
-    <span class="text-muted"> <%= comment.updated_at.strftime("%b %d, %Y") %></span></p>
+      <span class="text-muted">
+        <%= comment.updated_at.strftime("%b %d, %Y") %>
+        <%# only allow deletion of comment if current user's own comment or admin %>
+        <% if current_user.username == comment.commenter || current_user&.admin %>
+          <%= link_to icon("trash", class: 'mx-2'), article_comment_path(comment.article, comment),
+                        method: 'delete',
+                        data: { confirm: "Are you sure?" },
+                        class: 'text-danger' %>
+        <% end %>
+      </span>
+    </p>
     <p class="card-body">
       <%= comment.body %>
     </p>
