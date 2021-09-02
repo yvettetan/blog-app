@@ -1,26 +1,23 @@
 <%= form_with model: article do |f| %>
-<div class="container">
-  <%= f.label :title, class: 'form-label' %><br>
-  <%= f.text_field :title, class: 'form-control' %>
-  <%= f.label :thumbnail, class: 'form-label' %>
-  <%= f.file_field :thumbnail, class: 'form-control' %>
-  <% article.errors.full_messages_for(:title).each do |message| %>
-  <div><%= message %></div>
-  <% end %>
-</div>
-
-<div class="container field">
-  <%= f.label :body, class: 'form-label' %>
-  <%= f.rich_text_area :body, class: 'form-control' %>
-  <% article.errors.full_messages_for(:body).each do |message| %>
-  <div><%= message %></div>
-  <% end %>
-</div>
-
-<div class="container">
-  <div class="float-end">
-    <%= f.submit 'Update Article', class: 'btn btn-primary my-4' %>
+  <div class="container">
+    <%= f.label :title, class: 'form-label' %><br>
+    <%= f.text_field :title, class: 'form-control' %>
+    <%= f.label :thumbnail, class: 'form-label' %>
+    <%= f.file_field :thumbnail, class: 'form-control' %>
+    <% article.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
   </div>
+  <div class="container field">
+    <%= f.label :body, class: 'form-label' %>
+    <%= f.rich_text_area :body, class: 'form-control' %>
+    <% article.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div class="container">
+    <div class="float-end">
+      <%= f.submit class: 'btn btn-primary my-4' %>
+    </div>
   <% end %>
 </div>
-
