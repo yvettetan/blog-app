@@ -20,7 +20,7 @@
           <%= render 'layouts/notice' %>
         <% end %>
         <% if alert %>
-          <p><%= alert %></p>
+          <%= render 'layouts/alert' %>
         <% end %>
         <%= yield %>
       </div>
