@@ -9,13 +9,13 @@
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4 py-5">
     <% @articles.each do |article| %>
       <div class="col d-flex align-items-start">
-        <div>
+        <div class='shadow-sm p-3 mb-2 bg-light rounded border'>
           <h4 class="fw-bold mb-0"><%= article.title %></h4>
           <p class="mt-2"><span class="text-muted">By:</span> <%= article.user.username %> |
             <span class="text-muted">Updated: </span><%= article.updated_at.strftime("%b %d, %Y")%>
           </p>
           <p>
-            <%= article.body.to_plain_text.truncate_words(15) %>
+            <%= article.body.to_plain_text.truncate(100) %>
           </p>
           <div>
             <%# only display edit and delete options if article was written by admin %>
