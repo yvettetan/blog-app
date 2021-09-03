@@ -5,41 +5,38 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
         <li class="nav-item">
           <%= link_to "Home", root_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "About", home_about_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
           <%= link_to "Articles", articles_path, class: 'nav-link' %>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-      <% if current_user %>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <%= current_user.username %>
-          </a>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-          <%# only display new article option for admin %>
-          <% if current_user.admin %>
-            <a class="dropdown-item" href="<%= new_article_path %>">New Article</a>
-          <% end %>
-            <a class="dropdown-item" href="<%= edit_user_registration_path %>">Account Settings</a>
-            <hr class="dropdown-divider">
-            <%= link_to 'Logout', destroy_user_session_path, class: 'dropdown-item', method: :delete %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: 'btn btn-primary mx-2' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Signup", new_user_registration_path, class: 'btn btn-outline-light' %>
-        </li>
-      <% end %>
+        <% if current_user %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <%= current_user.username %>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%# only display new article option for admin %>
+              <% if current_user.admin %>
+                <a class="dropdown-item" href="<%= new_article_path %>">New Article</a>
+              <% end %>
+              <a class="dropdown-item" href="<%= edit_user_registration_path %>">Account Settings</a>
+              <hr class="dropdown-divider">
+              <%= link_to 'Logout', destroy_user_session_path, class: 'dropdown-item', method: :delete %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item text-center">
+            <%= link_to "Login", new_user_session_path, class: 'btn btn-primary mx-2' %>
+          </li>
+          <li class="nav-item text-center">
+            <%= link_to "Signup", new_user_registration_path, class: 'btn btn-outline-light' %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
