@@ -12,7 +12,7 @@
           <br>
           <p class="card-text mb-auto"><%= @article_feature1.body.to_plain_text.truncate_words(25) %></p>
           <div class="text-primary">
-            <%= link_to "Continue Reading", Article.find(@article_feature1.id), class: 'text-primary' %>
+            <%= link_to "Continue Reading", article_path(@article_feature1), class: 'text-primary' %>
             <%= icon("arrow-right") %>
           </div>
         </div>
@@ -28,7 +28,7 @@
           <br>
           <p class="mb-auto"><%= @article_feature2.body.to_plain_text.truncate_words(25) %></p>
           <div class="text-primary">
-            <%= link_to "Continue Reading", Article.find(@article_feature2.id), class: 'text-primary' %>
+            <%= link_to "Continue Reading", article_path(@article_feature2), class: 'text-primary' %>
             <%= icon("arrow-right") %>
           </div>
         </div>
@@ -61,12 +61,14 @@
       <h3 class="py-4 mb-4 fst-italic border-bottom">
         <q class="text-muted">To read is to voyage through time.</q><span class="lead">- Carl Sagan</span>
       </h3>
+    <% if Article.fourth %>
     <% @feature_articles.each do |article| %>
       <article>
-        <h2><%= article.title %></h2>
+        <h2><%= link_to article.title, article_path(article) %></h2>
         <p><%= article.updated_at.strftime("%b %d, %Y") %> by <%= article.user.username %></p>
         <p><%= article.body.to_plain_text.truncate_words(60) %></p>
       </article>
+    <% end %>
     <% end %>
     </div>
 </div>
