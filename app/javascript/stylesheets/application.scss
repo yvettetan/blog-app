@@ -53,3 +53,10 @@ select {
   width: 180px;
   height: 250px;
 }
+
+.container-center {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
