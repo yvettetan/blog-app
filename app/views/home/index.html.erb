@@ -10,7 +10,7 @@
         <div class="col p-4 d-flex flex-column position-static">
           <h3 class="mb-0"><%= @article_feature1.title %></h3>
           <br>
-          <p class="card-text mb-auto"><%= @article_feature1.body.to_plain_text.truncate_words(25) %></p>
+          <p class="card-text mb-auto"><%= @article_feature1.body.to_plain_text.truncate(200) %></p>
           <div class="text-primary">
             <%= link_to "Continue Reading", article_path(@article_feature1), class: 'text-primary' %>
             <%= icon("arrow-right") %>
@@ -28,7 +28,7 @@
         <div class="col p-4 d-flex flex-column position-static">
           <h3 class="mb-0"><%= @article_feature2.title %></h3>
           <br>
-          <p class="mb-auto"><%= @article_feature2.body.to_plain_text.truncate_words(25) %></p>
+          <p class="mb-auto"><%= @article_feature2.body.to_plain_text.truncate(200) %></p>
           <div class="text-primary">
             <%= link_to "Continue Reading", article_path(@article_feature2), class: 'text-primary' %>
             <%= icon("arrow-right") %>
