@@ -26,19 +26,19 @@ The objective of the project was to build a blog that allows a user to create, r
 
 Home:
 
-<img width="500" alt="Screen Shot 2021-09-17 at 4 17 59 PM" src="https://user-images.githubusercontent.com/78162620/133749735-78980023-be4c-460b-904e-ad04f9372815.png">
+<img width="1400" alt="Screen Shot 2021-09-17 at 4 17 59 PM" src="https://user-images.githubusercontent.com/78162620/133749735-78980023-be4c-460b-904e-ad04f9372815.png">
 
 Articles:
 
-<img width="500" alt="Screen Shot 2021-09-17 at 4 18 32 PM" src="https://user-images.githubusercontent.com/78162620/133749871-6d3d062a-36ae-45a8-9717-6c8c721da541.png">
+<img width="1400" alt="Screen Shot 2021-09-17 at 4 18 32 PM" src="https://user-images.githubusercontent.com/78162620/133749871-6d3d062a-36ae-45a8-9717-6c8c721da541.png">
 
 Rich Text Editor:
 
-<img width="500" alt="Screen Shot 2021-09-17 at 4 18 54 PM" src="https://user-images.githubusercontent.com/78162620/133749892-604bb031-9e31-4529-9189-bf5581afb994.png">
+<img width="1400" alt="Screen Shot 2021-09-17 at 4 18 54 PM" src="https://user-images.githubusercontent.com/78162620/133749892-604bb031-9e31-4529-9189-bf5581afb994.png">
 
 Comments:
 
-<img width="500" alt="Screen Shot 2021-09-17 at 4 20 14 PM" src="https://user-images.githubusercontent.com/78162620/133749901-725c4f06-baa7-40bf-8936-de22a975b40d.png">
+<img width="1400" alt="Screen Shot 2021-09-17 at 4 20 14 PM" src="https://user-images.githubusercontent.com/78162620/133749901-725c4f06-baa7-40bf-8936-de22a975b40d.png">
 
 ## The Process
 
