@@ -10,7 +10,7 @@ default: &default
 development:
   <<: *default
   database: blog_dev
-  
+
 test:
   <<: *default
   database: blog_test
@@ -18,3 +18,4 @@ test:
 production:
   <<: *default
   database: blog_prod
+  url: <%= ENV['DATABASE_URL'] %>
